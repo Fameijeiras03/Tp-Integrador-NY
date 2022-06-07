@@ -63,6 +63,12 @@
     display: flex;
     width: 200px;
 }
+.disponav.dispo-elementos {
+   display: flex;
+   flex-direction: row;
+  align-items: center;
+}
+
 .dispo-elementos {
     flex-direction: row;
 }
@@ -223,6 +229,10 @@
         display: none;
     }
     
+    .disponav.dispo-elementos {
+        display: flex;
+        align-items: center;
+    }
 }
 
 
