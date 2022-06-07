@@ -7,6 +7,8 @@
    width: auto;
 } */
 
+
+
 .div-footer{
     border: #000000 solid 1px;
     align-self: center
@@ -22,6 +24,7 @@
 .tamanofuenteh2{
     font-size: 30px;
     color: #cccccc;
+
 }
 .tamanofuenteh3{
     font-size: 20px;
@@ -68,7 +71,9 @@
    flex-direction: row;
   align-items: center;
 }
-
+.lista{
+    color: #cccccc;
+}
 .dispo-elementos {
     flex-direction: row;
 }
@@ -212,6 +217,7 @@
 .texto-detalle-genero{
     width: 500px;
     text-align: justify;
+    color:  #cccccc;
 }
 
 /*viewport*/
