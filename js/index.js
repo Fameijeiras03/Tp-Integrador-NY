@@ -1,7 +1,5 @@
 let campoBusqueda = document.querySelector('#busqueda')
 
-//todo  aca agarro el from
-
 let formBusqueda = document.querySelector('.ubiform')
 
 formBusqueda.addEventListener('submit',function(e) {
