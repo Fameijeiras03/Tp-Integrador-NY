@@ -22,16 +22,42 @@ fetch(url).then(function (response) {
 
         `
        <article class="">
+       <a href="./detalle-album.html"><img class="imgalbum" src=${info[i].album.cover}></a>
+       <a href="./detalle-artista.html"><h3 class="tamanofuenteh3">${info[i].artist.name}</h3></a>
+       <a href="./detallecancion.html"> <p class="tamanofuenteh3">${info[i].title}</p></a>
+       
+        
+        </article>
+        
+        `
+    }
+    etiquetaElementos = document.querySelector('#contenedor2')
+    for (let i = 5; i < 10; i++) {
+
+        etiquetaElementos.innerHTML +=
+
+        `
+       <article class="">
+       <a href="./detalle-album.html"><img class="imgalbum" src=${info[i].album.cover}></a>
+       <a href="./detalle-artista.html"><h3 class="tamanofuenteh3">${info[i].artist.name}</h3></a>
+       <a href="./detallecancion.html"> <p class="tamanofuenteh3">${info[i].title}</p></a>
+        </article>
+        
+        `
+    }
+    /*etiquetaElementos = document.querySelector('#contenedor3')
+    for (let i = 10; i < 15; i++) {
+
+        etiquetaElementos.innerHTML +=
+
+        `
+       <article class="">
         <img class="imgalbum" src=${info[i].album.cover}>
         <h3 class="tamanofuenteh3">${info[i].title}</h3>
-
-
-    
-        </article>`
+        </article>
         
-        
-    }
-
+        `
+    }*/
 })
 .catch(function (error) {
     console.log(error);

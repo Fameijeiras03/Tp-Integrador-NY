@@ -7,7 +7,9 @@
    width: auto;
 } */
 
-
+a {
+    text-decoration: none;
+}
 .div-footer{
     border: #000000 solid 1px;
     align-self: center
@@ -28,6 +30,11 @@
 .tamanofuenteh3{
     font-size: 20px;
     color: #cccccc;
+    text-align: center;
+}
+
+p.tamanofuenteh3{
+    width: 200px;
 }
 .tamanofuentetexto{
     font-size: 20px;
@@ -47,6 +54,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     flex-direction: column;
+    margin-top: 20px;
 
 }   
 .headerstyle{
