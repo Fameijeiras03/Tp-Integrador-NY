@@ -8,7 +8,7 @@ formBusqueda.addEventListener('submit',function(e) {
 
     if (campoBusqueda.value == "" || campoBusqueda.value.length <=3 ) {
         
-        alert('Para realizar la busuqeda debe escribir al menos 3 caracteres')
+        alert('El campo está vacio o tiene menos de 3 caracteres')
     }
         else{
             this.submit()   
