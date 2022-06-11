@@ -51,7 +51,7 @@ fetch(url)
         </article> 
         `
     }
-<<<<<<< HEAD
+
     //NO SE POR QUE ESCRIBI ESTO E HICE LO MISMO QUE EN LAS OTRAS DOS PERO NO APARECE NADA
     etiquetaElementos = document.querySelector('#contenedor3')
     for (let i = 10; i < 15; i++) {
@@ -65,7 +65,7 @@ fetch(url)
         
         `
     }
-=======
+
 
 // Tercer article ------ album//
     
@@ -90,7 +90,6 @@ for (let i = 0; i < 5; i++) {
 
 
 
->>>>>>> e6a48f008ff37bf14a9b47b68a304b368b37c6de
 })
 .catch(function (error) {
     console.log(error);
@@ -101,7 +100,3 @@ for (let i = 0; i < 5; i++) {
 
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> e6a48f008ff37bf14a9b47b68a304b368b37c6de
