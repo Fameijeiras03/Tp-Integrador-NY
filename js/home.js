@@ -45,11 +45,11 @@ fetch(url).then(function (response) {
         
         `
     }
-    /*etiquetaElementos = document.querySelector('#contenedor3')
+    //NO SE POR QUE ESCRIBI ESTO E HICE LO MISMO QUE EN LAS OTRAS DOS PERO NO APARECE NADA
+    etiquetaElementos = document.querySelector('#contenedor3')
     for (let i = 10; i < 15; i++) {
 
         etiquetaElementos.innerHTML +=
-
         `
        <article class="">
         <img class="imgalbum" src=${info[i].album.cover}>
@@ -57,7 +57,7 @@ fetch(url).then(function (response) {
         </article>
         
         `
-    }*/
+    }
 })
 .catch(function (error) {
     console.log(error);
@@ -67,14 +67,4 @@ fetch(url).then(function (response) {
 
 
 
-
-/* <a href="./detallecancion.html" class="aimg">
-                    <img src="./img/timelezz.jpeg" alt="logo" class="imgalbum">
-                </a>
-                <h3 class="tamanofuenteh3">
-                    Dilema
-                </h3>
-                <p class="tamanofuentetexto">
-                    <a href="./detalle-artista.html" class="estiloa">Jhay Cortez</a>
-                </p> */
 
