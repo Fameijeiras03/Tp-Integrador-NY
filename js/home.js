@@ -1,6 +1,6 @@
 
-
-let proxy = 'https://api.allorigins.win/raw?url='
+//!no sacar este espacio que hay, no se pq si lo sacamos se deja de renderizar todo
+let proxy = 'https://api.allorigins.win/raw?url=    '
 let endpoint =  'https://api.deezer.com/chart'
 let url = proxy+endpoint
 
@@ -52,19 +52,6 @@ fetch(url)
         `
     }
 
-    //NO SE POR QUE ESCRIBI ESTO E HICE LO MISMO QUE EN LAS OTRAS DOS PERO NO APARECE NADA
-    etiquetaElementos = document.querySelector('#contenedor3')
-    for (let i = 10; i < 15; i++) {
-
-        etiquetaElementos.innerHTML +=
-        `
-       <article class="">
-        <img class="imgalbum" src=${info[i].album.cover}>
-        <h3 class="tamanofuenteh3">${info[i].title}</h3>
-        </article>
-        
-        `
-    }
 
 
 // Tercer article ------ album//
@@ -83,7 +70,6 @@ for (let i = 0; i < 5; i++) {
    
     
     </article>
-    
     `
 
 }
