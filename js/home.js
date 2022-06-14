@@ -16,6 +16,7 @@ fetch(url)
         .then(function (dataTr) {
              console.log(dataTr);
             let info = dataTr.tracks.data
+            
 // Primer article ------ Canciones//
     let etiquetaElementos = document.querySelector('#contenedor')
 
