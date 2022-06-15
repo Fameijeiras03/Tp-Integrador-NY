@@ -16,6 +16,7 @@ fetch(url)
         .then(function (dataTr) {
              console.log(dataTr);
             let info = dataTr.tracks.data
+            console.log(info);
             
 // Primer article ------ Canciones//
     let etiquetaElementos = document.querySelector('#contenedor')
@@ -26,9 +27,9 @@ fetch(url)
 
         `
        <article class="">
-       <a href="./detalle-cancion.html?id=${info[i].id}"><img class="imgalbum" src=${info[i].album.cover}></a>
+       <a href="./detalle-cancion.html?id=${info[i].id}"><img class="imgalbum" src=${info[i].album.cover_medium}></a>
        <a href="./detalle-cancion.html?id=${info[i].id}"><p class="tamanofuenteh3">${info[i].title}</p></a>
-       <a href="./detalle-artista.html?id=${info[i].id}"><h3 class="tamanofuenteh3">${info[i].artist.name}</h3></a>
+       <a href="./detalle-artista.html?id=${info[i].artist.id}"><h3 class="tamanofuenteh3">${info[i].artist.name}</h3></a>
      
        
         
@@ -47,8 +48,8 @@ fetch(url)
 
         `
        <article class="">
-       <a href="./detalle-artista.html?id=${info[i].id}"><img class="imgalbum" src=${info[i].artist.picture_small}></a>
-       <a href="./detalle-artista.html?id=${info[i].id}"><h3 class="tamanofuenteh3">${info[i].artist.name}</h3></a>
+       <a href="./detalle-artista.html?id=${info[i].artist.id}"><img class="imgalbum" src=${info[i].artist.picture_medium}></a>
+       <a href="./detalle-artista.html?id=${info[i].artist.id}"><h3 class="tamanofuenteh3">${info[i].artist.name}</h3></a>
         </article> 
         `
     }
@@ -64,7 +65,7 @@ for (let i = 0; i < 5; i++) {
 
     `
    <article class="">
-   <a href="./detalle-album.html?id=${info[i].id}"><img class="imgalbum" src=${info[i].album.cover}></a>
+   <a href="./detalle-album.html?id=${info[i].id}"><img class="imgalbum" src=${info[i].album.cover_medium}></a>
    <a href=""./detalle-album.html?id=${info[i].id}""><p class="tamanofuenteh3">${info[i].album.title}</p></a>
    <a href="./detalle-artista.html?id=${info[i].id}"><h3 class="tamanofuenteh3">${info[i].artist.name}</h3></a>
  
