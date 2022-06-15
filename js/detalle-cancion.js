@@ -22,7 +22,7 @@ fetch(url)
         let image = document.querySelector('#imgDetalleCancion')
         let nombreCancion = document.querySelector('#nombreCancionn')
 
-         image.src = data.album.cover_small
+         image.src = data.album.cover_medium
          nombreCancion.innerText = data.title 
     })
 
