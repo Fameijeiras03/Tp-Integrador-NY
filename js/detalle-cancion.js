@@ -21,8 +21,15 @@ fetch(url)
 
         let image = document.querySelector('#imgDetalleCancion')
         let nombreCancion = document.querySelector('#nombreCancionn')
+        let nombreArtista = document.querySelector('#texto')
+        let nombreDisco = document.querySelector('#nombreAlbum')
+       
 
-         image.src = data.album.cover_medium
-         nombreCancion.innerText = data.title 
+         image.src = data.album.cover_big
+         nombreCancion.innerText = 'Canción:' + ' ' + data.title
+         nombreArtista.innerText = 'Artista:' + ' ' + data.artist.name
+         nombreDisco.innerText = 'Albúm:'+ ' ' + data.album.title 
+         
+
     })
 
