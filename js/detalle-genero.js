@@ -31,7 +31,8 @@ fetch(url)
         //para insertarle los valores que obtenga con estas propiedades a estos elementos del dom
 
         title.innerText = `El genero es: ${data.name}`
-        image.src = data.picture      
+        image.src = data.picture 
+                 
     })                   
 
   .catch(function(errores) {
@@ -46,12 +47,11 @@ fetch(url)
      
   let generoArtista = data.data
   console.log(generoArtista);
-
   for (let i = 0; i <5; i++) {
 
     seccionCantantes.innerHTML += ` <article> 
-    <div class="dispo-listado divelementos-home"> 
-    <h3 class="tamanofuenteh3"> Artista que pertenece a este genero: ${generoArtista[i].name}</h3>
+    <div class="dispo-listado divelementos-home">
+    <h3 class="tamanofuenteh3"> ${generoArtista[i].name}</h3>
     <img class="imgalbum" src=${generoArtista[i].picture_medium}>
     
     </div> 
