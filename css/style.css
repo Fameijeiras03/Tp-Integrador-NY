@@ -230,6 +230,20 @@ p.tamanofuenteh3{
 
 /*viewport*/
 
+/* detalle artista */
+.detalleArtista {
+    display: flex;
+    justify-content: center;
+}
+
+.articuloDetalleArtista {
+    align-content: center;
+}
+
+.listaArtista {
+    color: white;
+}
+
 @media (max-width: 768px) {
     .dispo-listado {
         flex-direction: column;

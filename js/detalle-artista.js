@@ -6,6 +6,8 @@ let id = queryStringObjLiteral.get('id');
 let urlArtistas = `https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${id}`
 let urlCancionesDelArtistas = `https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${id}/top?limit=5`
 let seccionDetalleArtista = document.querySelector('#seccionDetalleArtista')
+let seccionCancionesArtista = document.querySelector('.listaArtista')
+
 console.log(id);
 
 fetch(urlArtistas)
@@ -17,7 +19,7 @@ fetch(urlArtistas)
     
     seccionDetalleArtista.innerHTML += 
 
-    `<article class="">
+    `<article class="articuloDetalleArtista">
     <h1 class="tamanofuenteh1"> El artista es: ${data.name} </h1>
     <img src="${data.picture_medium}" alt="" class="imgalbum">
     <h2 class="tamanofuenteh2">Top 5 Canciones</h2>
@@ -31,29 +33,22 @@ fetch(urlArtistas)
   console.log(errores);
 })
 
+let contenidoDeLista = " "
+
 fetch(urlCancionesDelArtistas)
 .then(function (response) {
     return response.json(); 
 })
 .then(function(data) {   
    console.log(data);
-    for (let i = 0; index < 5; i++) {
+   
+   
+   for (let i = 0; i < 5; i++) {
         
-     seccionDetalleArtista.innerHTML += 
-
-    `<article class="">
-
-    <ul class="datos estilo-listas listadetalles">
-        <li>${data.data.title}</li>
-    </ul>
-
-</article>
-
-`
+   contenidoDeLista += `<li>${data.data[i].title}</li>`
+        }
         
-    }
-
-
+        seccionCancionesArtista.innerHTML += contenidoDeLista ;
 })                   
 
 .catch(function(errores) {
