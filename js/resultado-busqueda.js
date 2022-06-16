@@ -1,7 +1,7 @@
 
 let proxy = 'https://api.allorigins.win/raw?url=' ; 
 let endpoint =  'https://api.deezer.com/artist/' ;
-let urlArtist = proxy+endpoint;
+let urlArtist = endpoint;
 
 
 function searchArtist() {

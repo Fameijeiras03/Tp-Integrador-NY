@@ -8,10 +8,10 @@ let seccionCantantes = document.querySelector('.DetallesArtistasGeneros')
 
 let proxy = 'https://api.allorigins.win/raw?url='
 let endpoint =  `https://api.deezer.com/genre/${id}`
-const url = proxy+endpoint;
+const url = endpoint;
 
 let endpoint2 = `https://api.deezer.com/genre/${id}/artists`
-const url2 = proxy+endpoint2 ;
+const url2 = endpoint2 ;
 
 console.log(url);
 
