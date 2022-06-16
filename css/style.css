@@ -25,6 +25,7 @@ a {
 .tamanofuenteh2{
     font-size: 30px;
     color: #cccccc;
+    text-align: center;
 
 }
 .tamanofuenteh3{
@@ -243,8 +244,12 @@ p.tamanofuenteh3{
 
 .listaArtista {
     color: white;
+    text-align: center;
 }
 
+#imgArtistas{
+    margin-left: 150px;
+}
 @media (max-width: 768px) {
     .dispo-listado {
         flex-direction: column;

@@ -21,7 +21,7 @@ fetch(urlArtistas)
 
     `<article class="articuloDetalleArtista">
     <h1 class="tamanofuenteh1"> El artista es: ${data.name} </h1>
-    <img src="${data.picture_medium}" alt="" class="imgalbum">
+    <img src="${data.picture_medium}" alt="" class="imgalbum" id="imgArtistas">
     <h2 class="tamanofuenteh2">Top 5 Canciones</h2>
     
 </article>
