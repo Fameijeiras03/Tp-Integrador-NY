@@ -13,9 +13,9 @@ fetch(url)
 })
 
         .then(function (dataTr) {
-             console.log(dataTr);
+             //console.log(dataTr);
             let info = dataTr.tracks.data
-            console.log(info);
+            //console.log(info);
             
 // Primer article ------ Canciones//
     let etiquetaElementos = document.querySelector('#contenedor')
@@ -55,18 +55,33 @@ fetch(url)
 
 
 
+})
+.catch(function (error) {
+    console.log(error);
+})  
+
 // Tercer article ------ album//
-    
+fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums')
+
+.then(function (response) {
+    return response.json(); 
+})
+
+.then(function(data) {   
+console.log(data);
+let primerosAlbumes = data.data.slice(0,6)  //agarro la informacion del data y elijo de que elemento a que elemento quiero usar
+
 etiquetaElementos = document.querySelector('#contenedor3')
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < primerosAlbumes.length-1; i++) {
 
     etiquetaElementos.innerHTML +=
 
     `
    <article class="">
-   <a href="./detalle-album.html?id=${info[i].album.id}"><img class="imgalbum" src=${info[i].album.cover_medium}></a>
-   <a href="./detalle-album.html?id=${info[i].id}"><p class="tamanofuenteh3">${info[i].album.title}</p></a>
-   <a href="./detalle-artista.html?id=${info[i].artist.id}"><h3 class="tamanofuenteh3">${info[i].artist.name}</h3></a>
+
+   <a href="./detalle-album.html?id=${primerosAlbumes[i].id}"><img class="imgalbum" src=${primerosAlbumes[i].cover_medium}></a>
+   <a href="./detalle-album.html?id=${primerosAlbumes[i].id}"><p class="tamanofuenteh3">${primerosAlbumes[i].title}</p></a>
+   <a href="./detalle-artista.html?id=${primerosAlbumes[i].artist.id}"><h3 class="tamanofuenteh3">${primerosAlbumes[i].artist.name}</h3></a>
  
    
     
@@ -76,11 +91,9 @@ for (let i = 0; i < 5; i++) {
 }
 
 
-
 })
-.catch(function (error) {
-    console.log(error);
-})  
+
+
 
 
 

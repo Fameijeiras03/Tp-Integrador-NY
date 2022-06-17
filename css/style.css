@@ -250,6 +250,11 @@ p.tamanofuenteh3{
 #imgArtistas{
     margin-left: 200px;
 }
+
+#listaCanciones {
+    color: white;
+}
+
 @media (max-width: 768px) {
     .dispo-listado {
         flex-direction: column;

@@ -41,16 +41,21 @@ fetch(url)
   });
 
   fetch(urlTracks)
+  
   .then(function (response) {
+   //console.log(urlTracks);
     return response.json();
+   
   })
   .then(function (data) {
     console.log(data);
 
-    for (let i = 0; i < data.length - 1; i++) {
+    let canciones = data.data
+
+    for (let i = 0; i < canciones.length - 1; i++) {
       //pongo el -1 para que me tome todas las canciones
 
-      contenidoDeLista += `<li>${data.data[i].title}</li>`;
+      contenidoDeLista += `<li>${canciones[i].title}</li>`;
     }
 
     seccionDetalleAlbum.innerHTML += contenidoDeLista;
