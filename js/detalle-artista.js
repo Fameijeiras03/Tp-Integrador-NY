@@ -1,4 +1,4 @@
-//no borrar esto
+
 let queryString = location.search;
 let queryStringObjLiteral = new URLSearchParams(queryString);
 let id = queryStringObjLiteral.get('id');
