@@ -22,7 +22,7 @@ fetch(url)
    seccionDetalleAlbum.innerHTML += 
 
     `<article class=" ">
-    <img src="${data.albums.data.album.cover_medium}" alt="imagen" class="imgalbum" >
+    <img src="${data.tracks.data.album.cover_medium}" alt="imagen" class="imgalbum" >
     
     
 </article>
