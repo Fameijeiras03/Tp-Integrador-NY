@@ -1,31 +1,25 @@
-
 let queryString = location.search;
 let queryStringObjLiteral = new URLSearchParams(queryString);
-let id = queryStringObjLiteral.get('id');
+let id = queryStringObjLiteral.get("id");
 
-let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/${id} `
+let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/${id} `;
+let urlTracks = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/${id}/tracks`;
 
-
-let seccionDetalleAlbum = document.querySelector('#seccionAlbum')
-let ulCancionesArtista = document.querySelector('#listaCanciones')
-let contenidoDeLista = ' '
+let seccionDetalleAlbum = document.querySelector("#seccionAlbum");
+let ulCancionesArtista = document.querySelector("#listaCanciones");
+let contenidoDeLista = " ";
 console.log(id);
 
+fetch(url)
+  .then(function (response) {
+    return response.json();
+  })
 
-fetch(url) 
-.then(function (response) {
-    return response.json(); 
-})
+  .then(function (data) {
+    console.log(data);
 
-.then(function(data) {   
-   console.log(data);
-   
-   
-   for (let i = 0; i < 1; i++) {
-
-      seccionDetalleAlbum.innerHTML += 
-  
-      `<article class=" ">
+    for (let i = 0; i < 1; i++) {
+      seccionDetalleAlbum.innerHTML += `<article class=" ">
       <h2 class="tamanofuenteh3"> Album: ${data.title}</h2>
       <img class="imgalbum" src="${data.cover_medium}" alt="">
       
@@ -38,20 +32,32 @@ fetch(url)
       <h2 class="tamanofuenteh3">Canciones del album:</h2>
       </article>
          
-      `
+      `;
     }
-    for (let i = 0; i < 2; i++) {
-   
-      contenidoDeLista += `<li>${data.tracks.data[i].title}</li> `
-       
-     }
-     ulCancionesArtista.innerHTML += `<li>${data.tracks.data[i].title}</li> ` ;
-   
-         
+  })
 
-})                   
+  .catch(function (errores) {
+    console.log(errores);
+  });
 
-.catch(function(errores) {
-  console.log(errores);
-})
+  fetch(urlTracks)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    console.log(data);
+
+    for (let i = 0; i < data.length - 1; i++) {
+      //pongo el -1 para que me tome todas las canciones
+
+      contenidoDeLista += `<li>${data.data[i].title}</li>`;
+    }
+
+    seccionDetalleAlbum.innerHTML += contenidoDeLista;
+  })
+
+  .catch(function (errores) {
+    console.log(errores);
+  });
+
 
