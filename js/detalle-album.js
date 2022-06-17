@@ -3,14 +3,14 @@ let queryString = location.search;
 let queryStringObjLiteral = new URLSearchParams(queryString);
 let id = queryStringObjLiteral.get('id');
 
-let proxy = 'https://api.allorigins.win/raw?url=    '
-let endpoint =  `https://api.deezer.com/album/${id}`
-let url = proxy+endpoint
+let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/${id} `
+
 
 let seccionDetalleAlbum = document.querySelector('#seccionAlbum')
-
+let ulCancionesArtista = document.querySelector('#listaCanciones')
+let contenidoDeLista = ' '
 console.log(id);
-console.log(endpoint);
+
 
 fetch(url) 
 .then(function (response) {
@@ -19,31 +19,36 @@ fetch(url)
 
 .then(function(data) {   
    console.log(data);
-    let canciones = " "
-   for (let i = 0; i < data.tracks.data.length; i++) {
-    canciones +=  
-    `<article class=" ">
-       <li> ${data.tracks.data[i].title} </li>
+   
+   
+   for (let i = 0; i < 1; i++) {
 
-    </article> `
-   }
-   seccionDetalleAlbum.innerHTML += 
-   `<article class=" ">
-   <h3 class="tamanofuenteh3">${data.title}</h3>
-   <img class="imgalbum" src="${data.cover}" alt="">
-   <h2 class="tamanofuenteh3">Artista:</h2>
-   <h3 class="tamanofuenteh3">${data.artist.name}</h3>
-   <h2 class="tamanofuenteh3">Genero:</h2>
-   <h3 class="tamanofuenteh3">${data.genres.data[i].name}</h3>
-   <h2 class="tamanofuenteh3">Fecha de publicacion:</h2>
-   <h3 class="tamanofuenteh3">${data.release_date}</h3>
-   <h2 class="tamanofuenteh3">Canciones del album:</h2>
-   <ul> ${canciones} </ul>
-</article> `
-    
+      seccionDetalleAlbum.innerHTML += 
+  
+      `<article class=" ">
+      <h2 class="tamanofuenteh3"> Album: ${data.title}</h2>
+      <img class="imgalbum" src="${data.cover_medium}" alt="">
+      <h3 class="tamanofuenteh3">Artista: ${data.artist.name} </h3>
+      <h3 class="tamanofuenteh3">Genero: ${data.genres.data[i].name} </h3>
+      <h3 class="tamanofuenteh3">Fecha de publicacion: ${data.release_date}</h3>
+      
+      <h2 class="tamanofuenteh3">Canciones del album:</h2>
+      </article>
+         
+      `
+    }
+    for (let i = 0; i < 2; i++) {
+   
+      contenidoDeLista += `<li>${data.tracks.data[i].title}</li> `
+       
+     }
+     ulCancionesArtista.innerHTML += `<li>${data.tracks.data[i].title}</li> ` ;
+   
+         
 
 })                   
 
 .catch(function(errores) {
   console.log(errores);
 })
+

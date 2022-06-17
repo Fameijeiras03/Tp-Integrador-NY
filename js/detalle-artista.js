@@ -3,8 +3,8 @@ let queryString = location.search;
 let queryStringObjLiteral = new URLSearchParams(queryString);
 let id = queryStringObjLiteral.get('id');
 
-let urlArtistas = `https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${id}`
-let urlCancionesDelArtistas = `https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${id}/top?limit=5`
+let urlArtistas = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}`
+let urlCancionesDelArtistas = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}/top?limit=5`
 let seccionDetalleArtista = document.querySelector('#seccionDetalleArtista')
 let seccionCancionesArtista = document.querySelector('.listaArtista')
 
