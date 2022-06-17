@@ -1,6 +1,7 @@
 
 let urlArtist ='https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/'
 
+
 function searchArtist() {
     
     let sectionResultado = document.querySelector('#resultadoBusquedaSection')
@@ -21,40 +22,37 @@ fetch(ArtistaBuscar)
             <img class="imgalbum" src="./img/spinner.gif"/>
             </article>
             `
-    }
-    
-           
+    }         
 })
         .then(function (data) {
-            //console.log(data);
+            console.log(data);
 
         if (data.name) {
-            sectionResultado.innerHTML += 
-            
-
-              
+            sectionResultado.innerHTML =      //no le pongo += asi no me va sumando los distintos resultados de busqueda que hago
             `
             <article>
             <h2 class="tamanofuenteh3">Tu resultado de busqueda...</h2>
             <img class="imgalbum" src=${data.picture_medium}>
-            <h3 class="tamanofuenteh3">${data.name} </h3>
+            <a href="./detalle-artista.html?id=${data.id}"> <h3 class="tamanofuenteh3">${data.name}</h3></a>
+            
             </article>
             `
         } else {
             alert('No hay resultados para tu busqueda')
         }
-
-          
+    
 })
 .catch(function (error) {
     
 })
 
 }
-
-
-
-
+/*
+function fetchAlbumArtist(artist) {
+    let urlAlbum = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/'
+    fetch(urlAlbum)
+}
+*/
 
 
 

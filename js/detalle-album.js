@@ -28,8 +28,11 @@ fetch(url)
       `<article class=" ">
       <h2 class="tamanofuenteh3"> Album: ${data.title}</h2>
       <img class="imgalbum" src="${data.cover_medium}" alt="">
-      <h3 class="tamanofuenteh3">Artista: ${data.artist.name} </h3>
-      <h3 class="tamanofuenteh3">Genero: ${data.genres.data[i].name} </h3>
+      
+      <a href="./detalle-artista.html?id=${data.artist.id}"> <h3 class="tamanofuenteh3">Artista: ${data.artist.name} </h3></a>
+     
+      <a href="./detallle-genero.html?id=${data.genre_id}"><h3 class="tamanofuenteh3">Genero: ${data.genres.data[i].name} </h3></a>
+      
       <h3 class="tamanofuenteh3">Fecha de publicacion: ${data.release_date}</h3>
       
       <h2 class="tamanofuenteh3">Canciones del album:</h2>
