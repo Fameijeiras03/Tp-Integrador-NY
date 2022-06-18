@@ -1,8 +1,8 @@
+
 let proxy = 'https://api.allorigins.win/raw?url='
 let endpoint =  'https://api.deezer.com/genre'
 let url = endpoint
 
-let elementos = ''
 
 fetch(url).then(function (response) {
     return response.json()

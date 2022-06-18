@@ -6,12 +6,12 @@ let seccionCantantes = document.querySelector('.DetallesArtistasGeneros')
 
 //para buscar el genero mi API tenia un link que trae todos los generos, con / y el id del genero, busca el genero
 
+
 let proxy = 'https://api.allorigins.win/raw?url='
 let endpoint =  `https://api.deezer.com/genre/${id}`
-const url = endpoint;
+// const url = endpoint;
 
-let endpoint2 = `https://api.deezer.com/genre/${id}/artists`
-const url2 = endpoint2 ;
+
 
 console.log(url);
 

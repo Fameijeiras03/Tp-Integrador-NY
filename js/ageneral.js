@@ -10,8 +10,6 @@ formBusqueda.addEventListener('submit',function(e) {
         
         alert('El campo está vacio o tiene menos de 3 caracteres')
     }
-        else{
-            this.submit()   
-        }
+        
     
 })

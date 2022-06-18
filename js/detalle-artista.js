@@ -1,10 +1,10 @@
-//no borrar esto
+
 let queryString = location.search;
 let queryStringObjLiteral = new URLSearchParams(queryString);
 let id = queryStringObjLiteral.get('id');
 
-let urlArtistas = `https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${id}`
-let urlCancionesDelArtistas = `https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${id}/top?limit=5`
+let urlArtistas = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}`
+let urlCancionesDelArtistas = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}/albums?limit=5`
 let seccionDetalleArtista = document.querySelector('#seccionDetalleArtista')
 let seccionCancionesArtista = document.querySelector('.listaArtista')
 
@@ -22,7 +22,7 @@ fetch(urlArtistas)
     `<article class="articuloDetalleArtista">
     <h1 class="tamanofuenteh1"> El artista es: ${data.name} </h1>
     <img src="${data.picture_medium}" alt="" class="imgalbum" id="imgArtistas">
-    <h2 class="tamanofuenteh2">Top 5 Canciones</h2>
+    <h2 class="tamanofuenteh2">Top 5 Albums</h2>
     
 </article>
 
