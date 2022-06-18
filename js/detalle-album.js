@@ -55,8 +55,7 @@ fetch(url)
     for (let i = 0; i < canciones.length - 1; i++) {
       //pongo el -1 para que me tome todas las canciones
 
-      contenidoDeLista += `<li> ${canciones[i].title} </li>`;
-     
+      contenidoDeLista += `<li class='lista'>${canciones[i].title}</li>`;
     }
 
     seccionDetalleAlbum.innerHTML += contenidoDeLista;
