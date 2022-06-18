@@ -6,10 +6,9 @@ let id = qstoObjetoLiteral.get('id');
 
 console.log(id);
 
-let proxy = 'https://api.allorigins.win/raw?url='
-let endpoint = ` https://api.deezer.com/track/${id}`
-let url = endpoint
 
+
+let url = ` https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${id}`
 console.log(url);
 
 fetch(url)
@@ -24,15 +23,15 @@ fetch(url)
         let nombreCancion = document.querySelector('#nombreCancionn')
         let nombreArtista = document.querySelector('#texto')
         let nombreDisco = document.querySelector('#nombreAlbum')
-        let iframe = document.querySelector('#iframe')
-       
+        let iframe = `<iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/${id}" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>`
+        let player = document.querySelector("#sectionCanciones")
 
          image.src = data.album.cover_big
          nombreCancion.innerText = 'Canción:' + ' ' + data.title
          nombreArtista.innerText = 'Artista:' + ' ' + data.artist.name
          nombreDisco.innerText = 'Albúm:'+ ' ' + data.album.title 
-         iframe.src = data.preview
-         
+         player.innerHTML += iframe
+        
 
     })
 
