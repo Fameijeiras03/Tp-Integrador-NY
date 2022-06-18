@@ -9,11 +9,9 @@ let seccionCantantes = document.querySelector(".DetallesArtistasGeneros");
 //para buscar el genero mi API tenia un link que trae todos los generos, con / y el id del genero, busca el genero
 
 
-let proxy = 'https://api.allorigins.win/raw?url='
-let endpoint =  `https://api.deezer.com/genre/${id}`
-const url = endpoint;
 
-
+const url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${id}`
+const url2 = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${id}/artists`
 
 //para buscar la informacion, uso fetch
 fetch(url)
@@ -52,8 +50,8 @@ fetch(url2)
 
       seccionCantantes.innerHTML += ` <article> 
     <div class="dispo-listado divelementos-home">
-    <h3 class="tamanofuenteh3"> ${generoArtista[i].name}</h3>
-    <img class="imgalbum" src=${generoArtista[i].picture_medium}>
+    <a href="./detalle-artista.html?id=${generoArtista[i].id}"><h3 class="tamanofuenteh3"> ${generoArtista[i].name}</h3></a>
+    <a href="./detalle-artista.html?id=${generoArtista[i].id}">    <img class="imgalbum" src=${generoArtista[i].picture_medium}></a>
     
     </div> 
     </article>`;
