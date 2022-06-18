@@ -38,17 +38,21 @@ if (playlistJS == null || playlistJS.length == 0) {
             // ?id=${infoTracks[i].id}
            
              misCanciones +=  `<article class="dispo-listado dispo-elementos">
-                 <a href="./detalle-album.html">
+                 <a href="./detalle-album.html?id=${data.album.id}">
                     <img class="img-generos" src="${data.album.cover_big}"/>
                  </a>
                
-                <a href="./detalle-cancion.html" class="lista">
-                     Canción:${data.title}
+                <a href="./detalle-cancion.html?id=${data.id}">
+                    <p class="lista">Canción:${data.title}</p>
                 </a>
                 
-                <p class="lista">Artista:${data.artist.name}</p>
+                <a href="./detalle-artista.html?id=${data.artist.id}">
+                    <p class="lista">Artista:${data.artist.name}</p>
+                </a>
                 
-                <p class="lista">Albúm:${data.album.title}</p>
+                <a href="./detalle-album.html?id=${data.album.id}">
+                    <p class="lista">Albúm:${data.album.title}</p>
+                </a>
                 
                 <iframe src=${data.preview} frameborder="0"></iframe>
                 </article>`
