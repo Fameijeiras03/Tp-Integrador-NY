@@ -7,7 +7,7 @@ console.log(id);
 
 let proxy = 'https://api.allorigins.win/raw?url='
 let endpoint = ` https://api.deezer.com/track/${id}`
-let url = proxy+endpoint
+let url = endpoint
 
 console.log(url);
 

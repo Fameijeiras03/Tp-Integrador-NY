@@ -1,6 +1,8 @@
 
-let url = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre'
-let elementos = ''
+let proxy = 'https://api.allorigins.win/raw?url='
+let endpoint =  'https://api.deezer.com/genre'
+let url = endpoint
+
 
 fetch(url).then(function (response) {
     return response.json()
