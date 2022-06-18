@@ -1,9 +1,5 @@
 
-
-D
-
 let urlArtist ='https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/'
-
 
 
 function searchArtist() {
