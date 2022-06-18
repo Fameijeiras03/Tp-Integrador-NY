@@ -5,10 +5,9 @@ let id = qstoObjetoLiteral.get('id');
 
 console.log(id);
 
-let proxy = 'https://api.allorigins.win/raw?url='
-let endpoint = ` https://api.deezer.com/track/${id}`
-let url = endpoint
 
+
+let url = ` https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${id}`
 console.log(url);
 
 fetch(url)
