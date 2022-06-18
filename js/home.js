@@ -1,4 +1,3 @@
-
 //!no sacar este espacio que hay, no se pq si lo sacamos se deja de renderizar todo
 
 let proxy = 'https://api.allorigins.win/raw?url=    '
@@ -90,6 +89,8 @@ for (let i = 0; i < 5; i++) {
 .catch(function (error) {
     console.log(error);
 })  
+
+
 
 
 
