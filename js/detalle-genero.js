@@ -9,11 +9,9 @@ let seccionCantantes = document.querySelector('.DetallesArtistasGeneros')
 
 let proxy = 'https://api.allorigins.win/raw?url='
 let endpoint =  `https://api.deezer.com/genre/${id}`
-// const url = endpoint;
+const url = endpoint;
 
 
-
-console.log(url);
 
 //para buscar la informacion, uso fetch
 fetch(url)
