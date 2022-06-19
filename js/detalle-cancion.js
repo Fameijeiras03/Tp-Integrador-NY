@@ -23,14 +23,14 @@ fetch(url)
         let nombreCancion = document.querySelector('#nombreCancionn')
         let nombreArtista = document.querySelector('#texto')
         let nombreDisco = document.querySelector('#nombreAlbum')
-        // let iframe = `<iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/${id}" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>`
-        // let player = document.querySelector("#sectionCanciones")
+        let player = document.querySelector("#player")
 
          image.src = data.album.cover_big
          nombreCancion.innerText = 'Canción:' + ' ' + data.title
          nombreArtista.innerText = 'Artista:' + ' ' + data.artist.name
          nombreDisco.innerText = 'Albúm:'+ ' ' + data.album.title 
-        // player.innerHTML += iframe
+         player.src
+         
         
 
     })

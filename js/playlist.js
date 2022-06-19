@@ -23,10 +23,10 @@ if (playlistJS == null || playlistJS.length == 0) {
 
 
 } else {
-    
+        
     for (let i = 0; i < playlistJS.length; i++) {
         
-        let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${playlistJS[i]}`
+        let url = `https://api.deezer.com/track/${playlistJS[i]}`
 
         fetch(url)
         .then(function (response) {
