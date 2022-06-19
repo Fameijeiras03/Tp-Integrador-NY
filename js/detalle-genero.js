@@ -15,7 +15,7 @@ const url2 = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/$
 
 //para buscar la informacion, uso fetch
 fetch(url)
-  .then(function (response) {
+  .then(function(response) {
     //callback
     return response.json(); //no hacemos .parse() porque lo cambia automaticamente a tipo de dato que js entiende
   })
@@ -45,7 +45,7 @@ fetch(url2)
     let generoArtista = data.data;
     console.log(generoArtista);
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < generoArtista.length; i++) {
       //permite recorrer el array de la infromacion que viene de la api
 
       seccionCantantes.innerHTML += ` <article> 

@@ -40,7 +40,7 @@ fetch(urlCancionesDelArtistas)
     console.log(data);
 
     for (let i = 0; i < 5; i++) {
-      contenidoDeLista += `<li>${data.data[i].title}</li>`;
+      contenidoDeLista += ` <a style="color: white;" href="./detalle-album.html?id=${data.data[i].id}"><li>${data.data[i].title}</li></a>`;
     }
 
     seccionCancionesArtista.innerHTML += contenidoDeLista;
