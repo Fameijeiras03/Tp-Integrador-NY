@@ -1,13 +1,13 @@
 
 let urlArtist ='https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/'
 
+
 function reDirect() {
     document.location = "./resultado-busqueda.html"
 }
 function searchArtist() {
-    
-    reDirect();
-    
+    reDirect()
+
     let sectionResultado = document.querySelector('#resultadoBusquedaSection')
 
     let datoFormulario = document.querySelector('#busqueda').value //con el .value toma el dato que escribi en el formulario (para el valor que escribiste en el formulario)
