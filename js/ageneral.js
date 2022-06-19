@@ -14,4 +14,9 @@ formBusqueda.addEventListener('submit',function(e) {
     
 })
 
+function searchArtist() {
+    let datoFormulario = document.querySelector("#busqueda").value;
+    document.location = `./resultado-busqueda.html?name=${datoFormulario}`
+  }
+
 
