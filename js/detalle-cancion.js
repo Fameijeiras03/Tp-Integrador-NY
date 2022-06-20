@@ -3,6 +3,7 @@ let qs = location.search;
 let qstoObjetoLiteral = new URLSearchParams(qs) //para convertir una querystring a un objeto literal
 let id = qstoObjetoLiteral.get('id');
 //defino el id
+let seccionCancion = document.querySelector('#sectionCanciones')
 
 console.log(id);
 
@@ -20,7 +21,7 @@ fetch(url)
     .then(function (data) {
         console.log(data)
 
-
+    
         let image = document.querySelector('#imgDetalleCancion')
         let nombreCancion = document.querySelector('#nombreCancionn')
         let nombreArtista = document.querySelector('#texto')

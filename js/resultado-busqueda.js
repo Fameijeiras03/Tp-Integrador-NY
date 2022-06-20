@@ -1,12 +1,13 @@
 
-let queryString = location.search;
-let queryStringObjLiteral = new URLSearchParams(queryString);
-let artistName = queryStringObjLiteral.get("name");
+let queryString = location.search;  //capturamos la informacion que viene de la queryString (viene en string)
+let queryStringObjLiteral = new URLSearchParams(queryString);   //para convertir una querystring a un objeto literal
+let artistName = queryStringObjLiteral.get("name");  //queremos obtener un valor de la qs, el name
 let id = queryStringObjLiteral.get("id");
 
-let urlArtistas = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${artistName}`;
+let urlArtistas = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${artistName}`; //especificamos ruta de endpoint de nuestra API
 let urlGenero = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${id}`
-let seccionDetalleArtista = document.querySelector("#seccionDetalleArtista");
+
+let seccionDetalleArtista = document.querySelector("#seccionDetalleArtista");  //especificamos donde vamos a querer que se renderice la info de la API
 let seccionCancionesArtista = document.querySelector(".listaArtista");
 let seccionGeneros= document.querySelector("#generos");
 
@@ -14,9 +15,11 @@ let seccionGeneros= document.querySelector("#generos");
 //uso este endpoint para que me traiga de la api el nombre del artista
 fetch(urlArtistas)
   .then(function (response) {
-    console.log(response); //imprime el estado de la promesa (estados de codigo)
+    console.log(response); //imprime el estado de la promesa (codigos de estado)
+    //cada vez que el servidor recibe un request, emite un código que indica de forma abreviada el estado de la respuesta HTTP
    
-    if (response.status === 200) {   //si el estado de la peticion es 200, que haga devuelva la respuesta en json 
+
+    if (response.status === 200) {   //si el estado de la peticion es 200, que devuelva la respuesta en json (porque quiere decir que esta OK)
         return response.json() ;
 } else {
     seccionDetalleArtista.innerHTML +=  //sino que muestre el spinner, porque quiere decir que no se cargo
@@ -47,7 +50,11 @@ fetch(urlArtistas)
   `
   ;
     } else { //pero si no existe ese nombre, que se ejecute un alert que diga que no hay resultados para tu busqueda
-        alert('No hay resultados para tu busqueda')
+        seccionDetalleArtista.innerHTML = `
+        <article class="articuloDetalleArtista">
+        <h1 class="tamanofuenteh2"> No hay resultados para tu busqueda </h1>
+        </article>
+    `
     }
 
      //uso este endpoint para que me traiga los 5 albumes del artista

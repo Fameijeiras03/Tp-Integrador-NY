@@ -66,7 +66,7 @@ if (playlistJS == null || playlistJS.length == 0) {
 
 
         }).catch(function(errores) {
-            console.log(errores)
+            console.log("el error fue" + errores)
         })
 
         
