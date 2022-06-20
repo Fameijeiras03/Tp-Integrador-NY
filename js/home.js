@@ -1,4 +1,4 @@
-    //!no sacar este espacio que hay, no se pq si lo sacamos se deja de renderizar todo
+    //!no sacar este espacio que hay
 
     let url = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart'
 

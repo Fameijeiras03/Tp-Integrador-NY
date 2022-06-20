@@ -48,7 +48,7 @@ fetch(url2)
       seccionCantantes.innerHTML += ` <article> 
     <div class="dispo-listado divelementos-home">
     <a href="./detalle-artista.html?id=${generoArtista[i].id}"><h3 class="tamanofuenteh3"> ${generoArtista[i].name}</h3></a>
-    <a href="./detalle-artista.html?id=${generoArtista[i].id}">    <img class="imgalbum" src=${generoArtista[i].picture_medium}></a>
+    <a href="./detalle-artista.html?id=${generoArtista[i].id}"><img class="imgalbum" src=${generoArtista[i].picture_medium}></a>
     
     </div> 
     </article>`;
