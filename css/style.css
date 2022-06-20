@@ -255,6 +255,12 @@ p.tamanofuenteh3{
     color: white;
 }
 
+.divImagen{
+    display: flex;
+    justify-content: center;
+}
+
+
 @media (max-width: 768px) {
     .dispo-listado {
         flex-direction: column;

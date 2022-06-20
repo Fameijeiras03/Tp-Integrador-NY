@@ -1,9 +1,11 @@
+//capturamos el valor de id proveniente de la queryString
 let queryString = location.search;
 let queryStringObjLiteral = new URLSearchParams(queryString);
 let id = queryStringObjLiteral.get("id");
 
 let urlArtistas = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}`;
 let urlCancionesDelArtistas = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}/albums?limit=5`;
+//especificamos con el document.querySelector donde vamos a querer que se renderice la informacion de la api
 let seccionDetalleArtista = document.querySelector("#seccionDetalleArtista");
 let seccionCancionesArtista = document.querySelector(".listaArtista");
 
@@ -14,8 +16,9 @@ fetch(urlArtistas)
     return response.json();
   })
   .then(function (data) {
-    console.log(data);
+    console.log(data); 
 
+    //renderizamos en el html la informacion de la api 
     seccionDetalleArtista.innerHTML += `<article class="articuloDetalleArtista">
     <h1 class="tamanofuenteh1"> El artista es: ${data.name} </h1>
     <img src="${data.picture_medium}" alt="" class="imgalbum" id="imgArtistas">
