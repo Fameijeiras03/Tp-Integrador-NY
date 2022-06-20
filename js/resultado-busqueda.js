@@ -1,3 +1,4 @@
+
 let queryString = location.search;
 let queryStringObjLiteral = new URLSearchParams(queryString);
 let artistName = queryStringObjLiteral.get("name");
