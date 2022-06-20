@@ -46,7 +46,7 @@ fetch(url2)
     console.log(generoArtista);
 
     for (let i = 0; i < generoArtista.length; i++) {
-      //permite recorrer el array de la infromacion que viene de la api
+      //permite recorrer el array de la infromacion que viene de la api y pasar por cada indice del mismo
 
       seccionCantantes.innerHTML += ` <article> 
     <div class="dispo-listado divelementos-home">
