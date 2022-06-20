@@ -7,14 +7,16 @@ let seccionCancion = document.querySelector('#sectionCanciones')
 
 console.log(id);
 
-
+// declaro la api y la guardo dentro de una variable, donde la info que quiero traer es el id
 
 let url = ` https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${id}`
 console.log(url);
-
+// fetch para poder buscar esa info
 fetch(url)
     .then(function (response) {
         return response.json()
+
+        // transformo la info de json a un lenguaje que lo puede leer el js,
     })
     .then(function (data) {
         console.log(data)
@@ -30,7 +32,7 @@ fetch(url)
          nombreCancion.innerText = 'Canción:' + ' ' + data.title
          nombreArtista.innerText = 'Artista:' + ' ' + data.artist.name
          nombreDisco.innerText = 'Albúm:'+ ' ' + data.album.title 
-         player.src
+         player.src = data.preview
          
         
 
@@ -74,7 +76,7 @@ if (miPlaylist.includes(id)) {
 
 let indice = miPlaylist.indexOf(id)
 miPlaylist.splice(indice,1)
-fav.innerText = "Agregar a miPlaylist"
+fav.innerText = "Agregar a mi Playlist"
 
 } else {
 

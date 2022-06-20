@@ -1,18 +1,19 @@
-    //!no sacar este espacio que hay
-
+// guardar la variable
+// uso una variable, let con nombre url para guardar la funete de donde saco la info para el fetch
     let url = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart'
 
     let elementos = ''
-
+// con el fetch puedo traerme la info
     fetch(url)
             .then(function (response) {
         return response.json()
-        //agarro la info en json
+        //le pido a la funcion que me agarre la info
     })
 
             .then(function (dataTr) {
                 console.log(dataTr);
-
+// nombro estas variables para poder seprar cada parta de la informacion en diferentes grupos
+// asi despues busco lo q necesito de cada grupo
                 let infoTracks = dataTr.tracks.data
 
                 let infoAlbums = dataTr.albums.data
@@ -25,6 +26,7 @@
         let etiquetaElementos = document.querySelector('#contenedor')
         for (let i = 0; i < 5; i++) {
             etiquetaElementos.innerHTML +=
+            
 
             `
         <article class="">
@@ -40,7 +42,7 @@
         }
     // Segundo article ------ Artista//
         etiquetaElementos = document.querySelector('#contenedor2')
-        for (let i = 5; i < 10; i++) {
+        for (let i = 0; i < 5; i++) {
             etiquetaElementos.innerHTML +=
 
             `
