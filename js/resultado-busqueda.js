@@ -15,8 +15,10 @@ let seccionGeneros= document.querySelector("#generos");
 fetch(urlArtistas)
   .then(function (response) {
     console.log(response); //imprime el estado de la promesa (estados de codigo)
+    //--> cada vez que el servidor recibe un request, emite un código que indica de forma abreviada el estado de la respuesta HTTP
    
-    if (response.status === 200) {   //si el estado de la peticion es 200, que haga devuelva la respuesta en json 
+    
+    if (response.status === 200) {   //si el estado de la peticion es 200, que devuelva la respuesta en json 
         return response.json() ;
 } else {
     seccionDetalleArtista.innerHTML +=  //sino que muestre el spinner, porque quiere decir que no se cargo
