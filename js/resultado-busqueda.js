@@ -14,10 +14,10 @@ let seccionGeneros= document.querySelector("#generos");
 //uso este endpoint para que me traiga de la api el nombre del artista
 fetch(urlArtistas)
   .then(function (response) {
-    console.log(response); //imprime el estado de la promesa (estados de codigo)
+    console.log(response); //imprime el estado de la promesa (codigos de estado)
     //--> cada vez que el servidor recibe un request, emite un código que indica de forma abreviada el estado de la respuesta HTTP
    
-    
+
     if (response.status === 200) {   //si el estado de la peticion es 200, que devuelva la respuesta en json 
         return response.json() ;
 } else {
