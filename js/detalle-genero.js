@@ -8,14 +8,12 @@ let seccionCantantes = document.querySelector(".DetallesArtistasGeneros");
 
 //para buscar el genero mi API tenia un link que trae todos los generos, con / y el id del genero, busca el genero
 
-
-
-const url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${id}`
-const url2 = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${id}/artists`
+const url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${id}`;
+const url2 = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${id}/artists`;
 
 //para buscar la informacion, uso fetch
 fetch(url)
-  .then(function(response) {
+  .then(function (response) {
     //callback
     return response.json(); //no hacemos .parse() porque lo cambia automaticamente a tipo de dato que js entiende
   })
@@ -23,12 +21,11 @@ fetch(url)
     //informacion ya pasada a tipo de dato que entiende js
     console.log(data);
 
-    //quiero capturar el titulo e imagen
+    //con un document.querySelector especifico donde voy a querer que se renderice la informacion de la API
     let title = document.querySelector("#h3detalledegenero");
     let image = document.querySelector("#imgdetallegenero");
 
-    //para insertarle los valores que obtenga de la api a estos elementos del dom:
-
+    //para insertarle los valores que obtenga de la api a estos elementos del dom (modelo virtual)
     title.innerText = `El genero es: ${data.name}`; //templeString
     image.src = data.picture;
   })
