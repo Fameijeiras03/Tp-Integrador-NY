@@ -81,35 +81,3 @@ fetch(urlArtistas)
   });
 
 let contenidoDeLista = " ";
-
-//uso este endpoint para que me traiga el genero al que pertenece el artista
-fetch(urlGenero)
-.then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-   console.log(data);
-
-   if (data.name) {
-    seccionGeneros.innerHTML = `
-    <article class="articuloDetalleArtista">
-    <a href="./detallle-genero.html?id=${data.id}"><h3 class="tamanofuenteh3">Pertenece al genero: ${data.name}</h3></a>
-    <div class="divImagen">
-    <img class="imgalbum" id="imgalbumGenero" src="${data.picture_medium}" alt="">
-    </div>
- 
-    </article>
- ` 
-    
-} else {
-    alert('No hay resultados para tu busqueda')
-}
-
-
-   
-
-  })
-
-  .catch(function (errores) {
-    console.log(errores);
-  });
