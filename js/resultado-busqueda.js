@@ -25,7 +25,8 @@ fetch(urlArtistas)
       return response.json();
     } else {
       seccionDetalleArtista.innerHTML +=
-        //sino que muestre el spinner, porque quiere decir que no se cargo
+        //sino que muestre el spinner, porque quiere decir que no se cargo 
+        //(en principio siempre se cargaba y por eso no se veia el spinner, pero cuando dejo de andar el proxy y no cargaba la informacion, se veia el spinnner)
         `
     <article>
     <img class="imgalbum" src="./img/spinner.gif"/>    
