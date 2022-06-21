@@ -6,9 +6,11 @@ let id = queryStringObjLiteral.get("id");
 let urlArtistas = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${artistName}`; //especificamos ruta de endpoint de nuestra API
 let urlGenero = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${id}`;
 
+
+
 let seccionDetalleArtista = document.querySelector("#seccionDetalleArtista"); //especificamos donde vamos a querer que se renderice la info de la API
-let seccionCancionesArtista = document.querySelector(".listaArtista");
-let seccionGeneros = document.querySelector("#generos");
+let seccionAlbumesArtista = document.querySelector(".listaArtista");
+
 
 //uso este endpoint para que me traiga de la api el nombre del artista
 fetch(urlArtistas)
@@ -49,7 +51,7 @@ fetch(urlArtistas)
       //pero si no existe ese nombre, que se ejecute un alert que diga que no hay resultados para tu busqueda
       seccionDetalleArtista.innerHTML = `
         <article class="articuloDetalleArtista">
-        <h1 class="tamanofuenteh2"> No hay resultados para tu busqueda </h1>
+        <h1 class="tamanofuenteh1"> No hay resultados para tu busqueda </h1>
         </article>
     `;
     }
@@ -66,15 +68,20 @@ fetch(urlArtistas)
           contenidoDeLista += `<li>${data.data[i].title}</li>`;
         }
 
-        seccionCancionesArtista.innerHTML += contenidoDeLista;
+        seccionAlbumesArtista.innerHTML += contenidoDeLista;
       })
 
       .catch(function (errores) {
         console.log(errores);
       });
+
+
+
+      
   })
   .catch(function (errores) {
     console.log(errores);
   });
 
 let contenidoDeLista = " ";
+

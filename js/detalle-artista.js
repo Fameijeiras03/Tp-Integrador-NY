@@ -20,8 +20,10 @@ fetch(urlArtistas)
 
     //renderizamos en el html la informacion de la api 
     seccionDetalleArtista.innerHTML += `<article class="articuloDetalleArtista">
-    <h1 class="tamanofuenteh1"> El artista es: ${data.name} </h1>
-    <img src="${data.picture_medium}" alt="" class="imgalbum" id="imgArtistas">
+    <h2 class="tamanofuenteh2"> El artista es: ${data.name} </h2>
+    <div class="divImagen">
+    <img src="${data.picture_medium}" alt="" class="imgalbum">
+    </div>
     <h2 class="tamanofuenteh2">Top 5 Albums</h2>
     
 </article>
