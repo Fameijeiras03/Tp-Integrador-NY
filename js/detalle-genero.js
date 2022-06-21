@@ -8,6 +8,7 @@ let seccionCantantes = document.querySelector(".DetallesArtistasGeneros");
 
 //para buscar el genero mi API tenia un link que trae todos los generos, con / y el id del genero, busca el genero
 
+//espacio de memoria
 const url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${id}`;
 const url2 = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${id}/artists`;
 
