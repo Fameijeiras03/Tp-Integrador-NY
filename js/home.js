@@ -26,6 +26,7 @@ fetch(url)
 // Primer article ------ Canciones//
     let etiquetaElementos = document.querySelector('#contenedor')
     // operadores aritmeticos
+    //bucle for
     for (let i = 0; i < 5; i++) {
         etiquetaElementos.innerHTML +=
         
@@ -78,11 +79,3 @@ for (let i = 0; i < 5; i++) {
 })  
 
 // busca el error en el fetch
-
-
-
-
-
-
-
-
