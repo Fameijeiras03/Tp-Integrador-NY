@@ -43,7 +43,7 @@ fetch(urlArtistas)
       <a href="./detalle-artista.html?id=${data.id}"><h1 class="tamanofuenteh1"> El artista es: ${data.name} </h1></a>
        
           <div class="divImagen">
-          <img src="${data.picture_medium}" alt="" class="imgalbum">
+          <img src="${data.picture_big}" alt="" class="imgalbum">
           </div>
           <h2 class="tamanofuenteh2">Top 5 Albums</h2>
       </article>

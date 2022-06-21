@@ -22,7 +22,7 @@ fetch(urlArtistas)
     seccionDetalleArtista.innerHTML += `<article class="articuloDetalleArtista">
     <h2 class="tamanofuenteh2"> El artista es: ${data.name} </h2>
     <div class="divImagen">
-    <img src="${data.picture_medium}" alt="" class="imgalbum">
+    <img src="${data.picture_big}" alt="" class="imgalbum">
     </div>
     <h2 class="tamanofuenteh2">Top 5 Albums</h2>
     

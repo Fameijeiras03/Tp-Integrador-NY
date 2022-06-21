@@ -33,7 +33,7 @@ fetch(url)
 // concateno la info con un templeString comenzando con backticks y luego un queryString
         `
     <article class="">
-    <a href="./detalle-cancion.html?id=${infoTracks[i].id}"><img class="imgalbum" src=${infoTracks[i].album.cover_medium}></a>
+    <a href="./detalle-cancion.html?id=${infoTracks[i].id}"><img class="imgalbum" src=${infoTracks[i].album.cover_big}></a>
     <a href="./detalle-cancion.html?id=${infoTracks[i].id}"><p class="tamanofuenteh3">${infoTracks[i].title}</p></a>
     <a href="./detalle-artista.html?id=${infoTracks[i].id}"><h3 class="tamanofuenteh3">${infoTracks[i].artist.name}</h3></a>
     
@@ -51,7 +51,7 @@ fetch(url)
 
         `
     <article class="">
-    <a href="./detalle-artista.html?id=${infoArtist[i].id}"><img class="imgalbum" src=${infoArtist[i].picture_medium}></a>
+    <a href="./detalle-artista.html?id=${infoArtist[i].id}"><img class="imgalbum" src=${infoArtist[i].picture_big}></a>
     <a href="./detalle-artista.html?id=${infoArtist[i].id}"><h3 class="tamanofuenteh3">${infoArtist[i].name}</h3></a>
         </article> 
         `
@@ -64,7 +64,7 @@ for (let i = 0; i < 5; i++) {
 
     `
 <article class="">
-<a href="./detalle-album.html?id=${infoAlbums[i].id}"><img class="imgalbum" src=${infoAlbums[i].cover_medium}></a>
+<a href="./detalle-album.html?id=${infoAlbums[i].id}"><img class="imgalbum" src=${infoAlbums[i].cover_big}></a>
 <a href="./detalle-album.html?id=${infoAlbums[i].id}"><p class="tamanofuenteh3">${infoAlbums[i].title}</p></a>
 <a href="./detalle-artista.html?id=${infoAlbums[i].id}"><h3 class="tamanofuenteh3">${infoAlbums[i].artist.name}</h3></a>
 

@@ -22,7 +22,7 @@ fetch(url)
       seccionDetalleAlbum.innerHTML += `<article class=" ">
       <h2 class="tamanofuenteh3"> Album: ${data.title}</h2>
       <div class="divImagen">
-      <img class="imgalbum" src="${data.cover_medium}" alt="">
+      <img class="imgalbum" src="${data.cover_big}" alt="">
       </div>
       <a href="./detalle-artista.html?id=${data.artist.id}"> <h3 class="tamanofuenteh3">Artista: ${data.artist.name} </h3></a>
      
