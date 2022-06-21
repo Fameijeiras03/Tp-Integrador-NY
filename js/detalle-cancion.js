@@ -21,7 +21,6 @@ fetch(url)
     .then(function (data) {
         console.log(data)
 
-    
         let image = document.querySelector('#imgDetalleCancion')
         let nombreCancion = document.querySelector('#nombreCancionn')
         let nombreArtista = document.querySelector('#texto')
@@ -31,7 +30,7 @@ fetch(url)
          image.src = data.album.cover_big
          nombreCancion.innerText = 'Canción:' + ' ' + data.title
          nombreArtista.innerText = 'Artista:' + ' ' + data.artist.name
-         nombreDisco.innerText = 'Albúm:'+ ' ' + data.album.title 
+         nombreDisco.innerText =  'Albúm:'+ ' ' + data.album.title 
          player.src = data.preview
          
         
